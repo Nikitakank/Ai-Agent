@@ -31,7 +31,6 @@ ollamaModel_model=OllamaModel(
     host="http://localhost:11434", 
     model_id="llama3.2:1b"           
 )
-
 system_prompt = "You are a respectful agent. You give answers in a kind and humble way.""You can use correct data sources to give outputs." 
 agent = Agent(model=ollamaModel_model, system_prompt=system_prompt)
  
