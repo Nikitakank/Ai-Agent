@@ -1,0 +1,40 @@
+to creat the agentic ai, 
+ python -m venv .venv   #create a virtual environment   
+ .\.venv\Scripts\activate  #Activate
+  Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser  #try activating again.
+  pip install pandas numpy scikit-learn requests openai  #Install dependencies (for AI/ML or DevOps work)
+
+     Start coding your AI agent
+     ##agent.py creat with the ollama 
+     from strands import Agent 
+     from strands.models.ollama import OllamaModel   #conncet to the ollama 
+     #By default it runs Amazon bedrock in the Background.(Amazon bedrock it the service form aws which gen ai can created and in  background work with LLM's)
+     ollamaModel_model=OllamaModel(
+     host="http://localhost:11434", #ollama server address 
+     model_id="llama3.2:1b"            #Specify which model to use 
+)
+agent = Agent(model=ollamaModel_model)
+ #create an instance of Agent 
+
+
+ Run it with:  
+  python agent.py                        
+Your AI agent environment is ready!
+
+
+2: install ollama for run LLM's locally. 
+3.ollama pull llama3.2:1b, install this before python agent.py
+(from strands import Agent 
+from strands.models.ollama import OllamaModel 
+ #By default it runs Amazon bedrock in the Background.(Amazon bedrock it the service form aws which gen ai can created and in  background work with LLM's)
+ollamaModel_model=OllamaModel(
+    host="http://localhost:11434", 
+    model_id="llama3.2:1b"           
+)
+
+system_prompt = "You are a respectful agent. You give answers in a kind and humble way.""You can use correct data sources to give outputs." 
+agent = Agent(model=ollamaModel_model, system_prompt=system_prompt)
+ 
+# user_input = input("YOU:")
+agent("hello, how im i ")
+)
