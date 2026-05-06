@@ -1,0 +1,6 @@
+# Run this in your project folder on laptop
+pip freeze > requirements.txt
+
+git add requirements.txt
+git commit -m "Add requirements.txt"
+git push
