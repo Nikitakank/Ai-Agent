@@ -7,7 +7,6 @@ def get_current_time():
     """Returns the current system time."""
     return datetime.datetime.now().strftime("%I:%M %p")
 
-# system_prompt = "You are a respectful agent. You give answers in a kind and humble way."
 # 2. Setup Model
 ollama_model = OllamaModel(
     host="http://localhost:11434",
@@ -17,7 +16,7 @@ ollama_model = OllamaModel(
 # 3. Initialize Agent with the local tool
 agent = Agent(
     model=ollama_model,
-    tools=[get_current_time], # Add your function here
+    tools=[get_current_time], 
    
 )
 
