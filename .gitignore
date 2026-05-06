@@ -1,0 +1,10 @@
+echo ".venv/
+__pycache__/
+*.pyc
+.env
+venv/
+env/" > .gitignore
+
+git add .gitignore
+git commit -m "Add .gitignore"
+git push
